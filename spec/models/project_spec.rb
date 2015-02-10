@@ -6,6 +6,10 @@ RSpec.describe Project, type: :model do
     it { is_expected.to have_field(:description).of_type(String) }
   end
 
+  context "Relations" do
+    it { is_expected.to belong_to(:customer) }
+  end
+
   context "Validations" do
     it { is_expected.to validate_presence_of(:name) }
     it { is_expected.to validate_presence_of(:description) }
