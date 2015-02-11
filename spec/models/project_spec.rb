@@ -1,6 +1,10 @@
 require 'rails_helper'
 
 RSpec.describe Project, type: :model do
+  context "Document" do
+    it { is_expected.to be_timestamped_document }
+  end
+
   context "Fields" do
     it { is_expected.to have_field(:name).of_type(String) }
     it { is_expected.to have_field(:description).of_type(String) }
@@ -8,6 +12,7 @@ RSpec.describe Project, type: :model do
 
   context "Relations" do
     it { is_expected.to belong_to(:customer) }
+    it { is_expected.to have_many(:tasks) }
   end
 
   context "Validations" do
