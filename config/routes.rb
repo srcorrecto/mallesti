@@ -3,4 +3,6 @@ Rails.application.routes.draw do
   resources :customers, except: [:new, :edit]
   # Rutas para los recursos relacionados con Project
   resources :projects, except: [:new, :edit]
+  # Rutas para los recursos relacionados con Task
+  resources :tasks, except: [:new, :edit]
 end
