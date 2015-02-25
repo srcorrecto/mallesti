@@ -4,7 +4,7 @@ shared_examples_for "an index action for a REST controller" do |attributes|
   # resource [Document] Existing resource to show, update and delete. ( FactoryGirl.create( :alarm ), etc )
 
   before do
-    FactoryGirl.create_list( symbolize( @model ), 3, defined?( @list_options ) ? @list_options : nil )
+    FactoryGirl.create_list( @model.to_s.underscore.to_sym, 3, defined?( @list_options ) ? @list_options : nil )
     get :index, defined?( @index_params ) ? @index_params : nil
   end
 
