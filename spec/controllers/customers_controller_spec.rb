@@ -16,7 +16,7 @@ RSpec.describe CustomersController, type: :controller do
     # Para el test de index
     @first_page_resources = Customer.all
 
-    # Para el test de create y destory
+    # Para el test de create y destroy
     @parameters = FactoryGirl.attributes_for(:customer)
 
     # Para el test de update
