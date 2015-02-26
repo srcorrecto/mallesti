@@ -17,4 +17,5 @@ class Task
   validates :title,       presence: true
   validates :estimation,  presence: true, numericality: { greater_than: 0.0 }
   validates :tag,         inclusion: { in: VALID_TAGS }
+  validates :project,     presence: true
 end
