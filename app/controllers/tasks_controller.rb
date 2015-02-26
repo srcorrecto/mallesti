@@ -12,7 +12,7 @@ class TasksController < ApplicationController
   end
 
   def create
-    @task = Task.create(task_params)
+    @task = Project.find(params[:project_id]).tasks.create(task_params)
     respond_with @task
   end
 

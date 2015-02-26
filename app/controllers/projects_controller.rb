@@ -7,12 +7,12 @@ class ProjectsController < ApplicationController
   end
 
   def index
-    @projects = Project.all
+    @projects = Customer.find(params[:customer_id]).projects
     respond_with @projects
   end
 
   def create
-    @project = Project.create(project_params)
+    @project = Customer.find(params[:customer_id]).projects.create(project_params)
     respond_with @project
   end
 

@@ -8,6 +8,7 @@ class Project
   belongs_to :customer
   has_many   :tasks
 
-  validates :name, presence: true, uniqueness: {case_sensitive: false}
+  validates :name,        presence: true, uniqueness: {case_sensitive: false}
   validates :description, presence: true
+  validates :customer,    presence: true
 end

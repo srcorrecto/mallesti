@@ -18,6 +18,7 @@ RSpec.describe Project, type: :model do
   context "Validations" do
     it { is_expected.to validate_presence_of(:name) }
     it { is_expected.to validate_presence_of(:description) }
+    it { is_expected.to validate_presence_of(:customer) }
 
     it { is_expected.to validate_uniqueness_of(:name).case_insensitive }
   end
