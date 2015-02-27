@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  #devise_for :users
   # Rutas para los recursos relacionados con Customer
   resources :customers, except: [:new, :edit] do
   # Rutas para los recursos relacionados con Project
