@@ -7,6 +7,7 @@ RSpec.describe TasksController, type: :controller do
   json_attributes = FactoryGirl.attributes_for(:task).keys
 
   before :all do
+    @user = FactoryGirl.create(:user)
     @model = Task
     project = FactoryGirl.create(:project)
     @create_params = {project_id: project.id.to_s}
@@ -18,6 +19,10 @@ RSpec.describe TasksController, type: :controller do
     @first_page_resources = project.tasks
     @parameters = FactoryGirl.attributes_for(:task, project_id: project.id.to_s)
     @update_params = FactoryGirl.attributes_for(:task_update)
+  end
+
+  before do
+    sign_in @user
   end
 
   it_behaves_like "a REST controller", options, json_attributes
