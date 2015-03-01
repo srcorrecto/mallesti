@@ -12,6 +12,8 @@ gem 'devise',  '~> 3.4.1'
 # Convierte objetos de nuestros modelos en json
 gem 'active_model_serializers'
 
+gem 'rack-cors'
+
 # Estas gemas sólo se usan en el entorno de desarrollo (development)
 group :development do
   # Consola para trabajar en el entorno de desarrollo (development) más bonita
