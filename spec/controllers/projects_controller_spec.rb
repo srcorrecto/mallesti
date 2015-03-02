@@ -9,7 +9,7 @@ RSpec.describe ProjectsController, type: :controller do
   before :all do
     @user = FactoryGirl.create(:user)
     @model = Project
-    customer = FactoryGirl.create(:customer)
+    customer = FactoryGirl.create(:customer, user: @user)
     @create_params = {customer_id: customer.id.to_s}
     @resource = FactoryGirl.create(:project, customer: customer)
     @list_options = {customer: customer}
@@ -26,8 +26,8 @@ RSpec.describe ProjectsController, type: :controller do
   it_behaves_like "a REST controller", options, json_attributes
 
   context "special feature" do
-    let(:customer1){ FactoryGirl.create(:customer) }
-    let(:customer2){ FactoryGirl.create(:customer) }
+    let(:customer1){ FactoryGirl.create(:customer, user: @user) }
+    let(:customer2){ FactoryGirl.create(:customer, user: @user) }
 
     context "GET #index" do
       it "returns the correct tasks" do

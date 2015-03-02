@@ -9,7 +9,8 @@ RSpec.describe TasksController, type: :controller do
   before :all do
     @user = FactoryGirl.create(:user)
     @model = Task
-    project = FactoryGirl.create(:project)
+    @customer = FactoryGirl.create(:customer, user: @user)
+    project = FactoryGirl.create(:project, customer: @customer)
     @create_params = {project_id: project.id.to_s}
     @resource = FactoryGirl.create(:task, project: project)
     # Opciones necesarias para crear la lista de tasks en el test de index
@@ -28,8 +29,8 @@ RSpec.describe TasksController, type: :controller do
   it_behaves_like "a REST controller", options, json_attributes
 
   context "special feature" do
-    let(:project1){ FactoryGirl.create(:project) }
-    let(:project2){ FactoryGirl.create(:project) }
+    let(:project1){ FactoryGirl.create(:project, customer: @customer) }
+    let(:project2){ FactoryGirl.create(:project, customer: @customer) }
 
     context "GET #index" do
       it "returns the correct tasks" do
