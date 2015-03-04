@@ -1,15 +1,9 @@
 (function(){
-  var app = angular.module('mallesti', []);
+  var app = angular.module('mallesti', ['templates','mallesti-customer']);
+ 
 
 
- app.controller('CustomerController', ['$http', function($http){
-  var scope = this;
-  scope.customer = {};
 
-  $http.get('/customers.json')
-    .success(function(data){
-      scope.customer = data.customers;
-    })
-}]);
+
 
 })();

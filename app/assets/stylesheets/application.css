@@ -13,4 +13,20 @@
  *= require_tree .
  *= require_self
  */
+span{
+	font-size: 25px;
+	color: #f74182;
 
+}
+
+li{
+
+	list-style:none;
+}
+
+.contenedor, ul{
+	float: left;
+	margin-left: 30px;
+	margin-top: 30px;
+	padding-left: 30px;
+}
