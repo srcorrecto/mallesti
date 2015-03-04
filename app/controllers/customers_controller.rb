@@ -1,6 +1,12 @@
 class CustomersController < ApplicationController
   respond_to :json
 
+  def main
+    render text: '', layout: 'application'
+  end
+
+
+
   def show
     @customer = Customer.find(params[:id])
     respond_with @customer

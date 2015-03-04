@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="mallesti">
 <head>
   <title>Mallesti</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
@@ -8,7 +8,31 @@
 </head>
 <body>
 
-<%= yield %>
+<div ng-controller="CustomerController as customerCtrl">
+	<ul>
+	<li>name </li>
+    <li>address</li>
+    <li>town </li>
+    <li>city </li>
+    <li>country</li>
+    <li>zip_code</li> 
+    <li>phone </li>
+    <li>cif</li>
+    <li>email</li>
+	</ul>
+<ul ng-repeat="customer in customerCtrl.customer">
+<li>{{customer.name}}</li>
+<li>{{customer.address}}</li>
+<li>{{customer.city}}</li>
+<li>{{customer.town}}</li>
+<li>{{customer.country}}</li>
+<li>{{customer.zip_code}}</li>
+<li>{{customer.cif}}</li>
+<li>{{customer.phone}}</li>
+<li>{{customer.email}}</li>
+</ul>
+</div>
+
 
 </body>
 </html>
