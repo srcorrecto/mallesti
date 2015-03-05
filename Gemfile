@@ -4,6 +4,7 @@ gem 'rails',   '4.2.0'
 #intalacion angular
 gem 'rails-assets-angular'
 gem 'angular-rails-templates'
+gem 'rails-assets-angular-ui-router'
 
 # Convertir datos mongoDB en objetos de Ruby
 gem 'mongoid', '~> 4.0.1'

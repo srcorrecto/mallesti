@@ -8,5 +8,8 @@
 <li><span>cif: </span> {{customer.cif}}</li>
 <li><span>phone: </span> {{customer.phone}}</li>
 <li><span>email: </span> {{customer.email}}</li>
+<li><span>id: </span> {{customer.id}}</li>
+<li><a ui-sref="su_nabo_gordo({su_nabo_gordo_id: customer.id})" > VER </a> </li>
+<a href="" ng-click="customerCtrl.removeCustomer(customer)"> BORRAR </a>
 </ul>
 
