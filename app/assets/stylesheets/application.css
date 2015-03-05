@@ -14,7 +14,11 @@
  *= require_self
  */
 
- 
+body{
+	background-image: url(fondo.png);
+	width: 100%;
+	height: 100%;
+} 
 
 span{
 	font-size: 25px;
@@ -32,4 +36,56 @@ li{
 	margin-left: 30px;
 	margin-top: 30px;
 	padding-left: 30px;
+}
+
+a{
+
+	color: #FFF;
+	background-color: #f74182;
+	width: 90px;
+	height: 20px;
+	padding: 7px;
+	margin-top: 30px;
+	font-family: helvetica;
+	font-style: 13px;
+	text-decoration: none;
+}
+a:hover{
+	background-color: #000;
+}
+
+.bottom{
+
+	margin-top: 17px;
+}
+
+label{
+	font-family: helvetica;
+	font-size: 19px;
+	color: #f74182;
+	margin-left: 60px;
+	display: table-cell;
+}
+
+
+
+
+.form-control{
+	display: table-cell;
+	width: 200px;
+	margin-top: 20px;
+	display: block;
+	height: 60px;
+	border: solid 4px #f74182 ;
+	font-family: helvetica;
+	font-size: 13px;
+	margin-top: 30px;
+	margin-right: 10px;
+	margin-left: 10px;
+}
+
+
+.guardar{
+	display: table-cell;
+	padding: 25px;
 }

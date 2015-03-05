@@ -1,15 +1,14 @@
 <ul ng-repeat="customer in customerCtrl.customer">
 <li><span>name:  </span>{{customer.name}}</li>
-<li><span>address:</span> {{customer.address}}</li>
-<li><span>city: </span> {{customer.city}}</li>
+<li><span>email: </span> {{customer.email}}</li>
 <li><span>town: </span> {{customer.town}}</li>
+<li><span>city: </span> {{customer.city}}</li>
 <li><span>country: </span> {{customer.country}}</li>
-<li><span>zip_code: </span> {{customer.zip_code}}</li>
 <li><span>cif: </span> {{customer.cif}}</li>
 <li><span>phone: </span> {{customer.phone}}</li>
-<li><span>email: </span> {{customer.email}}</li>
-<li><span>id: </span> {{customer.id}}</li>
-<li><a ui-sref="su_nabo_gordo({su_nabo_gordo_id: customer.id})" > VER </a> </li>
-<a href="" ng-click="customerCtrl.removeCustomer(customer)"> BORRAR </a>
+<div class ="bottom"><a  ui-sref="su_nabo_gordo({su_nabo_gordo_id: customer.id})" > VER </a> </div>
+
+<div class ="bottom"><a class ="bottom" href="" ng-click="customerCtrl.removeCustomer(customer)"> BORRAR </a>
+
 </ul>
 

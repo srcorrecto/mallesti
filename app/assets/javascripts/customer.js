@@ -10,14 +10,16 @@ app.directive('customerTitle', function(){
   };
 });
 
+
 app.controller('CustomerController', ['$http', function($http){
   var scope = this;
   scope.customer = [];
-
   $http.get('/customers.json')
     .success(function(data){
       scope.customer = data.customers;
     })
+
+
 
     scope.removeCustomer = function(cliente){
       if(confirm("¿estas seguro" + cliente.name + "?")){
