@@ -14,6 +14,16 @@
  *= require_self
  */
 
+
+
+ h1{
+
+ 	font-family: helvetica;
+ 	font-size: 50px;
+ 	margin-left: 60px;
+ 	color: #f74182; 
+ }
+
 body{
 	background-image: url(fondo.png);
 	width: 100%;
@@ -32,14 +42,14 @@ li{
 }
 
 .contenedor, ul{
-	float: left;
+	position: relative;
+	display: inline-block;
 	margin-left: 30px;
 	margin-top: 30px;
 	padding-left: 30px;
 }
 
 a{
-
 	color: #FFF;
 	background-color: #f74182;
 	width: 90px;
@@ -60,32 +70,55 @@ a:hover{
 }
 
 label{
+	position: absolute;
+	margin-top: 50px;
+	left: 0;
 	font-family: helvetica;
 	font-size: 19px;
 	color: #f74182;
 	margin-left: 60px;
-	display: table-cell;
+	display: inline-block;
 }
 
+.has-error{
+	border: solid 4px red;
+	background-color: #f74182;
+	color: #FFF;
 
+}
 
 
 .form-control{
-	display: table-cell;
-	width: 200px;
+	display: inline-block;
+	width: 700px;
 	margin-top: 20px;
 	display: block;
-	height: 60px;
+	height: 40px;
 	border: solid 4px #f74182 ;
 	font-family: helvetica;
-	font-size: 13px;
+	font-size: 19px;
 	margin-top: 30px;
 	margin-right: 10px;
-	margin-left: 10px;
+	margin-left: 190px;
+}
+
+.formulari_c{
+	position: absolute;
+	width: 500px;
+	margin-top: 40px;
+	
 }
 
 
+
 .guardar{
-	display: table-cell;
+	margin-top: 50px;
+	margin-bottom: 20px;
 	padding: 25px;
+	background-color: #f74182;
+	border: solid 2px #f74182;
+	font-size: 19px;
+	margin-left: 190px;
+	font-family: helvetica;
+	color: #FFF;
 }

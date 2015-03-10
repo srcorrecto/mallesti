@@ -1,0 +1,20 @@
+<div class="alert alert-success" ng-if="customerCtrl.alerta">
+  Mu bien!
+</div>
+<ul>
+<li><span>name: </span>{{customerCtrl.cliente.name}}</li>
+<li><span>email: </span> {{customerCtrl.cliente.email}}</li>
+<li><span>town: </span> {{customerCtrl.cliente.town}}</li>
+<li><span>city: </span> {{customerCtrl.cliente.city}}</li>
+<li><span>country: </span> {{customerCtrl.cliente.country}}</li>
+<li><span>cif: </span> {{customerCtrl.cliente.cif}}</li>
+<li><span>phone: </span> {{customerCtrl.cliente.phone}}</li>
+<div class="bottom"><a ui-sref="home" > ATRAS </a> </div>
+<div class="bottom"><a ng-click="customerCtrl.toggleForm()">EDITAR </a> </div>
+
+<div ng-show="customerCtrl.showForm">
+  <customer-form ctrl="customerCtrl"></customer-form>
+</div>
+
+</ul>
+

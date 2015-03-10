@@ -1,6 +1,7 @@
 (function(){
   var app = angular.module('mallesti', ['ui.router', 'templates','mallesti-customer']);
  
+ // Aquí establecemos los estados de nuestra applicación.
 
  app.config(function($urlRouterProvider, $stateProvider){
   // Para las urls que no se encuentren, redirigimos a la raíz.
@@ -10,20 +11,16 @@
     .state("home", {
       url: "/home",
       templateUrl: "home.html",
-      controller: "CustomerController",
-      controllerAs: "customerCtrl"
+      controller: "CustomersController",
+      controllerAs: "customersCtrl"
     })
 
-      .state("su_nabo_gordo", {
-        url:"/home/:su_nabo_gordo_id",
-        templateUrl:"su_nabo_gordo.html",
-        controller: "NaboController",
-        controllerAs: "naboCtrl"
+ .state("customer", {
+        url: "/customers/:cliente_id",
+        templateUrl: "customerInfo.html",
+        controller: "CustomerController",
+        controllerAs: "customerCtrl"
       })
-
-});
-
-
-
+  });
 
 })();
